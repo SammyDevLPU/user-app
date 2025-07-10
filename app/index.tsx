@@ -7,6 +7,11 @@ import { StyleSheet } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
+SplashScreen.setOptions({
+  duration: 500,
+  fade: false
+});
+
 export default function Index() {
 
   
@@ -16,11 +21,7 @@ export default function Index() {
 
   useEffect(() => {
     if (loaded) {
-      SplashScreen.setOptions({
-        duration: 3000,
-        fade: true
-      });
-      SplashScreen.hideAsync();
+      SplashScreen.hide();
     }
   }, [loaded]);
 
