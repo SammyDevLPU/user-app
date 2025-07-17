@@ -16,7 +16,7 @@ const DobScreen: React.FC = () => {
                 >
                     <Ionicons name="arrow-back-sharp" size={22} color={Colors.white} />
                 </Pressable>
-                <Text style={style.text}>What's your birthday?</Text>
+                <Text style={style.text}>When's your birthday?</Text>
                 <Text
                     numberOfLines={2} 
                     style={{fontSize: 12, color: Colors.white}}

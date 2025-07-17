@@ -35,7 +35,7 @@ const Login: React.FC  = () => {
                 style={style.textInput}
             />
             <Pressable
-                style={style.loginBtn}
+                style={[style.btn, {backgroundColor: Colors.primary_color,  marginVertical: 5}]}
                 onPress={() => {
                     console.log('Btn Pressed.')
                 }}
@@ -50,7 +50,7 @@ const Login: React.FC  = () => {
                 onPress={() => {
                     router.navigate('/(auth)/createAccount')
                 }}
-                style={style.createAccountBtn}
+                style={[style.btn, {borderWidth: 1, borderColor: Colors.primary_color}]}
             >
                 <Text style={{color: Colors.primary_color}}>Create new account</Text>
             </Pressable>
@@ -89,23 +89,12 @@ const style = StyleSheet.create({
         color: Colors.white,
         paddingLeft: 10
     },
-    loginBtn: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 8,
-        height: 50,
-        width: '98%',
-        backgroundColor: Colors.primary_color,
-        marginVertical: 5
-    },
-    createAccountBtn: {
+    btn: {
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 18,
         height: 35,
         width: '98%',
-        borderWidth: 1,
-        borderColor: Colors.primary_color
     },
     forgotPass: {
         color: Colors.white,
